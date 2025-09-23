@@ -37,7 +37,7 @@ int main(){
     vec.pop_back();
     printMemVec(vec);
 
-    printf("After Push--------------n");
+    printf("After Push--------------\n");
     vec.push_back(101);
     vec.push_back(102);
     printMemVec(vec);
