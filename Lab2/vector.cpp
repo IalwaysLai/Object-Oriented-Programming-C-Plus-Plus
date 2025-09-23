@@ -20,17 +20,28 @@ using namespace std;
 }
 int main(){
     const int SIZE = 5;
-    vector<int> arr(SIZE);
+    vector<int> vec(SIZE);
     for (int i = 0; i < SIZE; i++){
-        arr[i] = 100 + i;
+        vec[i] = 100 + i;
     }
     printf("Before-----------------\n");
-    printMemVec(arr);
+    printMemVec(vec);
 
     //change the value.
-    incVecBy10(arr);
+    incVecBy10(vec);
     printf("After-----------------\n");
-    printMemVec(arr);
+    printMemVec(vec);
+
+    printf("After Pop--------------\n");
+    vec.pop_back();
+    vec.pop_back();
+    printMemVec(vec);
+
+    printf("After Push--------------n");
+    vec.push_back(101);
+    vec.push_back(102);
+    printMemVec(vec);
+
 
     return 0;
 }
