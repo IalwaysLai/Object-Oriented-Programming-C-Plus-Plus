@@ -16,15 +16,15 @@ int main(){
     printf("Hits Taken: %i\t Luck: %f\t Exp: %f \t Level: %i\n", p2.gethitsTaken(), p2.getLuck(), p2.getExp(), p2.getLevel());
 
     //CALL setHitsTaken(new_hit) on either p1 and p2
-    int new_hit = 3;
-    p2.setHitsTaken(new_hit);
+    int new_hits = 3;
+    p2.setHitsTaken(new_hits);
 
     cout << "\nP2 hits taken ";
     //PRINT out the hits_taken
 
     cout << "0 is dead, 1 is alive\n";
     //CALL isAlive() on both p1 and p2
-    cout << p1.getName()<< p1.isAlive() << endl;
-    cout << p2.getName()<< p2.isAlive() << endl;
+    cout << p1.getName() << " " << p1.isAlive() << endl;
+    cout << p2.getName() << " " << p2.isAlive() << endl;
     return 0;
 }
