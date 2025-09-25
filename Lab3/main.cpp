@@ -9,21 +9,22 @@ int main(){
     RPG p2 = RPG();
     //Why is c_str() necessary?
     printf("%s Current Stats\n", p1.getName().c_str());
-    printf("Hits Taken: %i\t Luck: %f\t Level: %i\n", p1.gethitsTaken(), p1.getLuck(), p1.getExp(), p1.getLevel());
+    printf("Hits Taken: %i\t Luck: %f\t Exp: %f \t Level: %i\n", p1.gethitsTaken(), p1.getLuck(), p1.getExp(), p1.getLevel());
 
     //PRINT the same for p2
     printf("%s Current Stats\n", p2.getName().c_str());
-    printf("Hits Taken: %i\t Luck: %f\t Level: %i\n", p2.gethitsTaken(), p2.getLuck(), p2.getExp(), p2.getLevel());
+    printf("Hits Taken: %i\t Luck: %f\t Exp: %f \t Level: %i\n", p2.gethitsTaken(), p2.getLuck(), p2.getExp(), p2.getLevel());
 
     //CALL setHitsTaken(new_hit) on either p1 and p2
-    p2.setHitsTaken(3);
+    int new_hit = 3;
+    p2.setHitsTaken(new_hit);
 
-    cout << "\n P2 hits taken ";
+    cout << "\nP2 hits taken ";
     //PRINT out the hits_taken
 
     cout << "0 is dead, 1 is alive\n";
     //CALL isAlive() on both p1 and p2
-    p1.isAlive();
-    p2.isAlive();
+    cout << p1.getName()<< p1.isAlive() << endl;
+    cout << p2.getName()<< p2.isAlive() << endl;
     return 0;
 }
