@@ -19,7 +19,7 @@ int main(){
     int new_hits = 3;
     p2.setHitsTaken(new_hits);
 
-    cout << "\nP2 hits taken ";
+    cout << "\nP2 hits taken " << p2.gethitsTaken() << endl;
     //PRINT out the hits_taken
 
     cout << "0 is dead, 1 is alive\n";
