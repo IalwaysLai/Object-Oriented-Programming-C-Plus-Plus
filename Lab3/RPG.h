@@ -7,7 +7,7 @@ const int INVENTORY_SIZE = 10;
 const float HIT_FACTOR = 0.05;
 const int MAX_HITS_TAKEN = 3;
 
-class RPG{
+class RPG {
     public:
     //constructors
     RPG();
@@ -25,13 +25,11 @@ class RPG{
     int getLevel() const;
 
     //COMPLETE THE REST
-
     private:
     string name;
     int hits_taken;
     float luck;
     float exp;
     int level;
-    //COMPLETE THE REST
 };
 #endif
