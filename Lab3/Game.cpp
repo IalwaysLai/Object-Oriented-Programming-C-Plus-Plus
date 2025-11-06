@@ -71,7 +71,7 @@ void Game :: gameLoop(){
 
 void Game :: printFinalResults(){
     for (int i = 0; i < players.size(); i++){
-        cout << "NPC_" << i << ": ";
+        cout << i << ": ";
         players[i] -> printStats();
     }
 }
