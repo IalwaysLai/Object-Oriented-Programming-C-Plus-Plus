@@ -24,11 +24,11 @@ class RPG {
     int getLevel() const;
 
     //Coding Assignment 4 Modifications
-    void RPG::setName(string name){
+    void setName(string name){
         this -> name = name;
     }
 
-    void RPG::updateExplevel(){
+    void updateExplevel(){
         exp += 50.0;
         if (exp >= 100.0){
             level += 1;
@@ -37,7 +37,7 @@ class RPG {
         }
     }
 
-    void RPG :: attack(RPG * opponent){
+    void attack(RPG * opponent){
         random_device rd;
         mt19937 gen(rd());
         uniform_real_distribution<double> dis(0.0, 0.1);
@@ -52,7 +52,7 @@ class RPG {
         }
     }
 
-    void RPG :: printStats(){
+    void printStats(){
         bool alive = isAlive();
         cout << "Name: " << name << "\tHits Taken: "<< hits_taken << "\tLuck: " << luck << "\tExp: " << exp << "\tLevel: " << level;
         if (alive){
