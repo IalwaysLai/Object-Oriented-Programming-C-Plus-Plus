@@ -63,7 +63,7 @@ class RPG {
         }
         cout << endl;
     }
-    RPG::~RPG(){
+    ~RPG(){
     }
 
     //COMPLETE THE REST
