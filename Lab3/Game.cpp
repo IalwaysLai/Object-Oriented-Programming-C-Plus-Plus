@@ -30,7 +30,7 @@ void Game :: endRound(RPG* winner, RPG* loser, int loserIndex){
     (winner) -> setHitsTaken(0);
     live_players.erase(loserIndex);
     (winner) -> updateExplevel();
-    cout << "NPC_"<< (winner) -> getName() << " won against NPC_" << loser -> getName() << endl;
+    cout << "NPC_"<< (winner) -> getName() << " won against " << loser -> getName() << endl;
 }
 
 void Game :: battleRound(){

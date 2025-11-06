@@ -40,7 +40,7 @@ class RPG {
     void attack(RPG * opponent){
         random_device rd;
         mt19937 gen(rd());
-        uniform_real_distribution<double> dis(0.0, 0.1);
+        uniform_real_distribution<double> dis(0.0, 1.0);
         float random_num = dis(gen);
 
         const float HIT_FACTOR = 0.5;
@@ -59,7 +59,7 @@ class RPG {
             cout << "\tStatus: Alive";
         }
         else{
-            cout << "\tStatus: Dead:";
+            cout << "\tStatus: Dead";
         }
         cout << endl;
     }
