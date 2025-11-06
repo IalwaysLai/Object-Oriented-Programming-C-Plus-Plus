@@ -23,14 +23,6 @@ class RPG {
     float getExp() const;
     int getLevel() const;
 
-    //COMPLETE THE REST
-    private:
-    string name;
-    int hits_taken;
-    float luck;
-    float exp;
-    int level;
-
     //Coding Assignment 4 Modifications
     void RPG::setName(string name){
         this -> name = name;
@@ -73,5 +65,13 @@ class RPG {
     }
     RPG::~RPG(){
     }
+
+    //COMPLETE THE REST
+    private:
+    string name;
+    int hits_taken;
+    float luck;
+    float exp;
+    int level;
 };
 #endif
