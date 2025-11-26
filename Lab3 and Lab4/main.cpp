@@ -10,5 +10,5 @@ int main(){
    game.generatePlayers(num_players);
    game.gameLoop();
    game.printFinalResults();
-    return 0;
+   return 0;
 }
