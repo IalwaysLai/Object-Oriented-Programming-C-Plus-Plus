@@ -1,0 +1,73 @@
+@startuml groupProjectUML
+
+' ===========================
+' Class Definitions
+' ===========================
+
+class SensorData {
+  + SensorData(ts: long, deviceID: String, co: double, humidity: double, light: boolean, lpg: double, motion: boolean, smoke: double, temp: double)
+  + getTimestamp(): long
+  + getDeviceID(): String
+  + getCO(): double
+  + getHumidity(): double
+  + getLight(): boolean
+  + getLPG(): double
+  + getMotion(): boolean
+  + getSmoke(): double
+  + getTemp(): double
+  + setTemp(temp: double): void
+  + convertTempToCelsius(): void
+}
+
+class CSVReader {
+  + CSVReader(filePath: String)
+  + getFilePath(): String
+  + setFilePath(filePath: String): void
+  + readData(): List<SensorData>
+}
+
+class DataProcessor {
+  + DataProcessor()
+  + getProcessedData(): List<SensorData>
+  + setProcessedData(data: List<SensorData>): void
+  + processData(data: List<SensorData>): List<SensorData>
+  + groupByDevice(data: List<SensorData>): Map<String, List<SensorData>>
+}
+
+class FileWriter {
+  + FileWriter(outputDirectory: String)
+  + getOutputDirectory(): String
+  + setOutputDirectory(directory: String): void
+  + writeData(data: List<SensorData>, fileName: String): void
+  + writeByAttribute(data: List<SensorData>, attribute: String): void
+}
+
+class SensorHub {
+  + SensorHub()
+  + getData(): List<SensorData>
+  + getCSVReader(): CSVReader
+  + getDataProcessor(): DataProcessor
+  + getFileWriter(): FileWriter
+  + setCSVReader(reader: CSVReader): void
+  + setDataProcessor(processor: DataProcessor): void
+  + setFileWriter(writer: FileWriter): void
+  + setData(data: List<SensorData>): void
+  + collectData(): void
+  + processData(): void
+  + exportData(): void
+}
+
+' ===========================
+' Relationships
+' ===========================
+
+SensorHub *-- SensorData        : owns
+SensorHub --> CSVReader         : uses
+SensorHub --> DataProcessor     : uses
+SensorHub --> FileWriter        : uses
+
+CSVReader --> SensorData        : creates
+DataProcessor --> SensorData    : processes
+FileWriter --> SensorData       : writes
+
+@enduml
